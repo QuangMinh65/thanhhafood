@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <menu>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <div class="tencuahang">
+            Thành Hà Quán
+        </div>
+        <div class="lienhe">
+            <p><ion-icon name="call-outline"></ion-icon>Liên hệ:</p> <b>036 237 8890</b>
+        </div>
+    </menu>
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="img/banner1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="img/banner2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="img/banner3.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Thêm chức năng tự động chạy với thời gian chuyển đổi là 3 giây
+        var slideInterval = setInterval(function () {
+            plusSlides(1);
+        }, 5000);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    <div class="thucdon">
+        <div class="gachtrai"></div>
+        Menu
+        <div class="gachphai"></div>
+    </div>
+    <!-- các món ăn -->
+    <div class="content">
+        <!-- món 1 -->
+        <div class="monan">
+            <div class="hinh">
+                <img src="img/mon1.jpg" alt="">
+            </div>
+            <div class="ten">
+                <b>Lẩu gà lá é</b>
+            </div>
+        </div>
+
+        <!-- món 1 -->
+        <div class="monan">
+            <div class="hinh">
+                <img src="img/mon2.jpg" alt="">
+            </div>
+            <div class="ten">
+                <b>Gỏi gà, vịt</b>
+            </div>
+        </div>
+
+        <!-- món 1 -->
+        <div class="monan">
+            <div class="hinh">
+                <img src="img/mon3.jpg" alt="">
+            </div>
+            <div class="ten">
+                <b>Cháo gà, vịt</b>
+            </div>
+        </div>
+
+        <!-- món 2 -->
+        <div class="monan">
+            <div class="hinh">
+                <img src="img/mon4.jpg" alt="">
+            </div>
+            <div class="ten">
+                <b>Cháo lòng gà, vịt</b>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h3>Thông tin liên hệ:</h3>
+        <p><ion-icon name="call-outline"></ion-icon>: 036 237 8890</p>
+        <div class="thongtin">
+            <a href="https://www.facebook.com/profile.php?id=100075923427634"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.facebook.com/profile.php?id=100075923427634"><ion-icon name="logo-tiktok"></ion-icon></a>
+            <a href="https://www.facebook.com/profile.php?id=100075923427634"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+        <h5>Copyright © 2023 Thành Hà - Lẩu gà lá é</h5>
+        <hr>
+        <div class="end">
+            <h2>Lẩu Gà Lá É Thành Hà</h2>
+            <p></p>
+            <h5>98 Bàu Cạn, Long Phước, Long Thành, Đồng Nai, Việt Nam
+                <h5>Email: nguyenquangminhh65@gmail.com</h5>
+                <h5>Mã số thuế: ???</h5>
+                <h5>Ngày cấp: ???</h5>
+                <h5>Xem địa chỉ cụ thể: <a href="https://goo.gl/maps/FX3RaDtqVn8L35YF6" style="text-decoration: underline; margin-left: 10px; color: aliceblue;"><ion-icon name="location-outline"></ion-icon>Ấn vào đây</a></h5>
+        </div>
+    </footer>
+</body>
+
+</html>
